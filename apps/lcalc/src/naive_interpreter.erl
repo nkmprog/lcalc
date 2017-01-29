@@ -27,6 +27,9 @@ eval(#{type     := lambda,
 eval(Expression) ->
     Expression.
 
+%%%===================================================================
+%%% Internal functions
+%%%===================================================================
 normal_order_beta_reduction(#{type := lambda,
                               name := Name,
                               body := Body}, ArgumentExpression) ->
@@ -57,7 +60,3 @@ normal_order_beta_reduction(_BoundVariable,
                             #{type := name}=Name,
                             _ReplaceWith) ->
     Name.
-
-%%%===================================================================
-%%% Internal functions
-%%%===================================================================
